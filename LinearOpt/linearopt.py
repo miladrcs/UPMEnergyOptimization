@@ -418,7 +418,7 @@ class LinearOptimization:
         varChangeBattery = {key: {index: model.BatteryChange[key, index]() for index in timeMatrix} for key in AgentsetSending}
         varStatus = {key: {index: model.StatusMatrix[key, index]() for index in timeMatrix} for key in AgentsetSending}
 
-        #xlsxFile(varStatus, varsending, varreceiving, varSellGrid, varBuyGrid, varInsertBattery, varExtractBattery, varDeg, varSoC, varChangeBattery, varEarning ,dayNumber, 8, 2022,AgentsetSending)
+        xlsxFile(varStatus, varsending, varreceiving, varSellGrid, varBuyGrid, varInsertBattery, varExtractBattery, varDeg, varSoC, varChangeBattery, varEarning ,dayNumber, 8, 2022,AgentsetSending)
         #model.EnergyBalance.display()
         return varEarning, varDeg, varSoC
 
