@@ -28,7 +28,7 @@ def BatteryCharge(power, cRating, Capacity, SoC):
     return [SoC, remainedPower, inserted]
 
 def BatteryDegradation(BatteryTransaction):
-    DegCap = 1.25 * 0.000001 * BatteryTransaction
+    DegCap = 1.25 * 0.00001 * BatteryTransaction
 
     return DegCap
 
