@@ -267,9 +267,9 @@ class LinearOptimization:
         """def Limit19(model, AS, T):
             if T > 1:
                 if T == len(timeMatrix):
-                    return model.Degradation[AS, T] == (model.Degradation[AS, T - 1] + ((2.5 * 0.00001 * model.MaximumPower[AS, T]) + (1.25 * 0.000001 * ((model.InsertToBattery[AS, T]) + (model.ExtractFromBattery[AS, T]))))) - ((model.BatteryChange[AS, T - 1]) * ((MaximumDegradationMatrix[AgentsetSending.index(AS)] * capacityMatrix[AgentsetSending.index(AS)])))
+                    return model.Degradation[AS, T] == (model.Degradation[AS, T - 1] + ((2.5 * 0.0001 * model.MaximumPower[AS, T]) + (1.25 * 0.00001 * ((model.InsertToBattery[AS, T]) + (model.ExtractFromBattery[AS, T]))))) - ((model.BatteryChange[AS, T - 1]) * ((MaximumDegradationMatrix[AgentsetSending.index(AS)] * capacityMatrix[AgentsetSending.index(AS)])))
                 else:
-                    return model.Degradation[AS, T] == (model.Degradation[AS, T - 1] + ((1.25 * 0.000001 * ((model.InsertToBattery[AS, T]) + (model.ExtractFromBattery[AS, T]))))) - ((model.BatteryChange[AS, T - 1]) * ((MaximumDegradationMatrix[AgentsetSending.index(AS)] * capacityMatrix[AgentsetSending.index(AS)])))
+                    return model.Degradation[AS, T] == (model.Degradation[AS, T - 1] + ((1.25 * 0.00001 * ((model.InsertToBattery[AS, T]) + (model.ExtractFromBattery[AS, T]))))) - ((model.BatteryChange[AS, T - 1]) * ((MaximumDegradationMatrix[AgentsetSending.index(AS)] * capacityMatrix[AgentsetSending.index(AS)])))
             else:
                 return model.Degradation[AS, T] == BatteryDegMat[AgentsetSending.index(AS)]
 
@@ -278,7 +278,7 @@ class LinearOptimization:
         # 18 measures the degradation of each battery
         def Limit18(model, AS, T):
             if T > 1:
-                return model.Degradation[AS, T] == ((1.25 * 0.000001 * ((model.InsertToBattery[AS, T]) + (model.ExtractFromBattery[AS, T])))) - ((model.BatteryChange[AS, T - 1]) * ((MaximumDegradationMatrix[AgentsetSending.index(AS)] * capacityMatrix[AgentsetSending.index(AS)])))
+                return model.Degradation[AS, T] == ((1.25 * 0.00001 * ((model.InsertToBattery[AS, T]) + (model.ExtractFromBattery[AS, T])))) - ((model.BatteryChange[AS, T - 1]) * ((MaximumDegradationMatrix[AgentsetSending.index(AS)] * capacityMatrix[AgentsetSending.index(AS)])))
             else:
                 return model.Degradation[AS, T] == BatteryDegMat[AgentsetSending.index(AS)]
 
